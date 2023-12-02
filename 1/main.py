@@ -4,15 +4,9 @@ with open("./input", "r") as f:
 # print(inp)
 
 def fromstringtonum(string: str):
-  if (string.startswith("one")): return "1"
-  if (string.startswith("two")): return "2"
-  if (string.startswith("three")): return "3"
-  if (string.startswith("four")): return "4"
-  if (string.startswith("five")): return "5"
-  if (string.startswith("six")): return "6"
-  if (string.startswith("seven")): return "7"
-  if (string.startswith("eight")): return "8"
-  if (string.startswith("nine")): return "9"
+  numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+  for i in range(len(numbers)):
+    if string.startswith(numbers[i]): return str(i + 1)
   return None
 
 if __name__ == "__main__":
