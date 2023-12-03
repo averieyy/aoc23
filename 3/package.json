@@ -1,11 +1,12 @@
 {
-  "name": "day-2",
+  "name": "3",
   "version": "1.0.0",
-  "description": "AoC day 2",
+  "description": "AoC day 3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "averieyy",
   "license": "ISC"
 }
