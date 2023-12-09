@@ -133,8 +133,6 @@ function getValueOfCard2 (card) {
 
   if (vallist.length == 0) vallist = [5];
 
-  // console.log(vallist, card[0]);
-
   if (matches(vallist, [5])) return 6;
   if (matches(vallist, [4, 1])) return 5;
   if (matches(vallist, [3, 2])) return 4;
@@ -145,14 +143,17 @@ function getValueOfCard2 (card) {
 }
 
 cards.sort((a, b) => {
+  console.log(getValueOfCard2(a), a, getValueOfCard2(b), b);
   let v = getValueOfCard2(a) - getValueOfCard2(b);
   if (v == 0) {
     for (let value = 0; value < a[0].length; value++) {
+      if (b[0][value] == a[0][value]) continue;
+
       if (a[0][value] == 11) return -1;
+      if (b[0][value] == 11) return 1;
       if (b[0][value] < a[0][value]) {
         return 1;
       }
-      else if (b[0][value] == a[0][value]) continue;
       else return -1;
     }
     console.log("none went through", a, b);
@@ -169,3 +170,10 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 console.log(sum2);
+
+/*
+245810353
+246027565
+
+246436046
+*/
