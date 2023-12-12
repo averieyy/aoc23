@@ -1,0 +1,19 @@
+{
+  "name": "10",
+  "version": "1.0.0",
+  "description": "AOC day 10",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc index.ts && node ."
+  },
+  "keywords": [],
+  "author": "averieyy",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4"
+  }
+}
